@@ -1,0 +1,20 @@
+$breakpoints: (
+  s: 468px,
+  m: 648px,
+  l: 848px,
+  x: 968px,
+  xl: 1024px,
+  xx: 1200px,
+);
+
+@mixin from($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media screen and (min-width: map-get($breakpoints , $bp )) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $bp) {
+      @content;
+    }
+  }
+}

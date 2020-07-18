@@ -1,0 +1,33 @@
+$devMode: true;
+
+body {
+  font-family: $fontFamily;
+  font-size: $fontSize - 0.6;
+  background: url(../images/bg-intro-mobile.png), $primary_red;
+  @include from(l) {
+    background: url(../images/bg-intro-desktop.png), $primary_green;
+  }
+}
+.app-container {
+  display: grid;
+
+  min-height: 100vh;
+  @include from(l) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.data-container {
+  background: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  &__title {
+    font-size: $fontSize + 0.8;
+  }
+  &__paragraph {
+    font-size: $fontSize - 0.2;
+    margin-top: 2rem;
+  }
+}
