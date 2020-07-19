@@ -114,12 +114,12 @@ span {
   @media screen and (min-width: 1024px) {
     .content-form {
       width: 100%;
-      height: 60vh;
       border-radius: 0.8rem;
       padding: 3rem; } }
 
 .form-group {
-  margin-top: 1.3rem; }
+  margin-top: 1.3rem;
+  position: relative; }
   @media screen and (min-width: 1024px) {
     .form-group {
       margin: 2rem; } }
@@ -148,6 +148,22 @@ span {
 .text-danger {
   color: #ff7a7a;
   font-weight: bold; }
+
+.is-invalid {
+  border: 1px solid #ff7a7a; }
+  .is-invalid::placeholder {
+    color: #ff7a7a; }
+
+.icon-error {
+  position: absolute;
+  right: 2rem;
+  top: 2rem; }
+
+.text-error {
+  text-align: right; }
+
+.contain-error {
+  display: none; }
 
 *,
 *::after,

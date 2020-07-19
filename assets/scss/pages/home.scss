@@ -98,13 +98,14 @@ span {
   }
   @include from(xl) {
     width: 100%;
-    height: 60vh;
+    //height: 60vh;
     border-radius: 0.8rem;
     padding: 3rem;
   }
 }
 .form-group {
   margin-top: 1.3rem;
+  position: relative;
   @include from(xl) {
     margin: 2rem;
   }
@@ -116,6 +117,7 @@ span {
   border-radius: 0.6rem;
   border: 1px solid $grayish_blue;
   font-size: $fontSize - 0.3;
+
   &::placeholder {
     color: hsl(0, 0%, 48%);
     font-weight: bold;
@@ -135,4 +137,23 @@ span {
 .text-danger {
   color: $primary_red;
   font-weight: bold;
+}
+.is-invalid {
+  border: 1px solid $primary_red;
+  &::placeholder {
+    color: $primary_red;
+  }
+}
+.icon-error {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  //display: none;
+}
+.text-error {
+  text-align: right;
+  //display: none;
+}
+.contain-error {
+  display: none;
 }

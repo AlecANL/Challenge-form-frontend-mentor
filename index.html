@@ -39,36 +39,81 @@
           </div>
           <form class="form-container__form">
             <div class="content-form">
-              <div class="form-group">
+              <div class="form-group" id="form-group">
                 <input
                   type="text"
                   class="form-control name"
                   placeholder="Fist Name"
+                  id="first-name"
                 />
+                <div class="contain-error">
+                  <img
+                    class="icon-error"
+                    src="./assets/images/icon-error.svg"
+                    alt="error icon"
+                  />
+                  <p class="text-danger text-error">
+                    First Name Can not be empty
+                  </p>
+                </div>
               </div>
               <div class="form-group">
                 <input
                   type="text"
                   class="form-control last-name"
                   placeholder="Last Name"
+                  id="last-name"
                 />
+                <div class="contain-error">
+                  <img
+                    class="icon-error"
+                    src="./assets/images/icon-error.svg"
+                    alt="error icon"
+                  />
+                  <p class="text-danger text-error">
+                    Last Name Can not be empty
+                  </p>
+                </div>
               </div>
+
               <div class="form-group">
                 <input
-                  type="text"
+                  type="email"
                   class="form-control email"
                   placeholder="Email Address"
+                  id="email"
                 />
+                <div class="contain-error">
+                  <img
+                    class="icon-error"
+                    src="./assets/images/icon-error.svg"
+                    alt="error icon"
+                  />
+                  <p class="text-danger text-error">
+                    Email Can not be empty
+                  </p>
+                </div>
               </div>
               <div class="form-group">
                 <input
                   type="text"
                   class="form-control password"
                   placeholder="Password"
+                  id="password"
                 />
+                <div class="contain-error">
+                  <img
+                    class="icon-error"
+                    src="./assets/images/icon-error.svg"
+                    alt="error icon"
+                  />
+                  <p class="text-danger text-error">
+                    Password Can not be empty
+                  </p>
+                </div>
               </div>
               <div class="form-group">
-                <button class="btn btn-green mt-1">
+                <button type="button" class="btn btn-green mt-1" id="btn">
                   Claim Your Free Trial
                 </button>
               </div>
