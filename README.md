@@ -1,6 +1,6 @@
 # Frontend Mentor - Intro component with sign up form
 
-![this preview website](./assets/images/desings.png)
+![this preview website](/assets/images/desings.png)
 
 ## Welcome! 👋
 
