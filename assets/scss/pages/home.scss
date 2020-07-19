@@ -5,29 +5,134 @@ body {
   font-size: $fontSize - 0.6;
   background: url(../images/bg-intro-mobile.png), $primary_red;
   @include from(l) {
-    background: url(../images/bg-intro-desktop.png), $primary_green;
+    background: url(../images/bg-intro-desktop.png), $primary_red;
   }
 }
+
+span {
+  display: block;
+  @include from(xl) {
+    display: inline;
+  }
+}
+
 .app-container {
   display: grid;
 
   min-height: 100vh;
-  @include from(l) {
+  @include from(xl) {
     grid-template-columns: 1fr 1fr;
   }
 }
 .data-container {
-  background: cornflowerblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: #fff;
+  color: $colorText;
+  margin-top: 5rem;
+  @include from(s) {
+    padding: 0 3.5rem 0 3.5rem;
+  }
+  @include from(xl) {
+    margin-top: 0;
+    padding: 0 1.5rem 0 1.2rem;
+  }
   &__title {
     font-size: $fontSize + 0.8;
+    @include from(xl) {
+      font-size: $fontSize + 1.5;
+    }
   }
   &__paragraph {
     font-size: $fontSize - 0.2;
     margin-top: 2rem;
   }
+}
+
+/* Form container */
+
+.form-container {
+  padding: 2rem;
+  margin-top: 2rem;
+
+  @include from(s) {
+    padding: 3rem;
+  }
+  @include from(xl) {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 5rem 0 5rem;
+  }
+
+  &__data {
+    background: $primary_blue;
+    padding: 1.5rem;
+    border-radius: 0.6rem;
+    color: $colorText;
+    font-size: $fontSize - 0.4;
+    text-align: center;
+    margin-bottom: 2rem;
+    @include from(xl) {
+      padding: 2.2rem;
+    }
+  }
+}
+.text-strong {
+  font-weight: bold;
+}
+
+.content-form {
+  background: #ffff;
+  padding: 1.6rem;
+  border-radius: 0.6rem;
+  @include from(s) {
+    padding: 2rem;
+  }
+  @include from(m) {
+    width: 70%;
+    margin: 0 auto;
+  }
+  @include from(xl) {
+    width: 100%;
+    height: 60vh;
+    border-radius: 0.8rem;
+    padding: 3rem;
+  }
+}
+.form-group {
+  margin-top: 1.3rem;
+  @include from(xl) {
+    margin: 2rem;
+  }
+}
+.form-control {
+  outline: none;
+  width: 100%;
+  padding: 1.7rem;
+  border-radius: 0.6rem;
+  border: 1px solid $grayish_blue;
+  font-size: $fontSize - 0.3;
+  &::placeholder {
+    color: hsl(0, 0%, 48%);
+    font-weight: bold;
+    font-size: $fontSize - 0.3;
+  }
+  @include from(xl) {
+    padding: 2.2rem;
+    font-size: $fontSize;
+  }
+}
+
+.data-inf {
+  margin-top: 1rem;
+  text-align: center;
+  color: $grayish_blue;
+}
+.text-danger {
+  color: $primary_red;
+  font-weight: bold;
 }

@@ -4,26 +4,20 @@ $primary_green: hsl(154, 59%, 51%);
 $primary_blue: hsl(248, 32%, 49%);
 $dark_lue: hsl(249, 10%, 26%);
 $grayish_blue: hsl(246, 25%, 77%);
+$colorText: #fff;
 
 /* ==== Font ====*/
 $fontFamily: 'Poppins', sans-serif;
 $fontSize: 2rem;
-$max_width: 1200px;
-$devMode: false;
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  @if ($devMode = true) {
-    border: 1px solid #000;
-  }
-}
+$max_width: 1400px;
+
 html {
   font-size: 62.5%;
 }
 .container {
   max-width: $max_width;
   margin: 0 auto;
+}
+.mt-1 {
+  margin-top: 1rem;
 }

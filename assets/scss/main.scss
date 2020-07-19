@@ -2,3 +2,15 @@
 @import './base/mixins.scss';
 @import './components/buttons.scss';
 @import './pages/home.scss';
+
+$devMode: false;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @if ($devMode == true) {
+    border: 1px solid #000;
+  }
+}
